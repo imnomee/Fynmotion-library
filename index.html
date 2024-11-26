@@ -26,12 +26,94 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="wrapper">
-            <button class="btn btn-ripple">Click Ripple</button>
-            <a href="#" class="btn btn-aqua">Aqua</a>
-            <a href="#" class="btn btn-bouce">Bounce</a>
-            <a href="#" class="btn btn-shadow"><span>Hover Me</span></a>
+        <div class="container">
+            <div class="card">
+                <div class="imgBox">
+                    <img
+                        src="image1.jpg"
+                        width="300"
+                        height="300"
+                        loading="lazy" />
+                </div>
+                <div class="content">
+                    <h2>Card One</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Optio neque, molestias quasi dignissimos est enim
+                        eum repellendus, reiciendis, nihil ipsum rerum repellat
+                        voluptatum? Est ipsam quisquam vel assumenda fugiat
+                        adipisci.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img
+                        src="image2.jpg"
+                        width="300"
+                        height="300"
+                        loading="lazy" />
+                </div>
+                <div class="content">
+                    <h2>Card Two</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Optio neque, molestias quasi dignissimos est enim
+                        eum repellendus, reiciendis, nihil ipsum rerum repellat
+                        voluptatum? Est ipsam quisquam vel assumenda fugiat
+                        adipisci.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img
+                        src="image3.jpg"
+                        width="300"
+                        height="300"
+                        loading="lazy" />
+                </div>
+                <div class="content">
+                    <h2>Card Thhree</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Optio neque, molestias quasi dignissimos est enim
+                        eum repellendus, reiciendis, nihil ipsum rerum repellat
+                        voluptatum? Est ipsam quisquam vel assumenda fugiat
+                        adipisci.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img
+                        src="image4.jpg"
+                        width="300"
+                        height="300"
+                        loading="lazy" />
+                </div>
+                <div class="content">
+                    <h2>Card Four</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Optio neque, molestias quasi dignissimos est enim
+                        eum repellendus, reiciendis, nihil ipsum rerum repellat
+                        voluptatum? Est ipsam quisquam vel assumenda fugiat
+                        adipisci.
+                    </p>
+                </div>
+            </div>
         </div>
         <script src="./script.js"></script>
+        <script src="./vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll('.card'), {
+                max: 45,
+                speed: 100,
+                glare: true,
+                'max-glare': 0.7,
+                reset: false,
+            });
+        </script>
     </body>
 </html>

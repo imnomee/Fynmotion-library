@@ -44,6 +44,8 @@ body {
     gap: 20px;
     flex-wrap: wrap;
 }
+
+/* Button Click Ripple */
 .btn-ripple {
     border: 3px solid var(--black);
     color: var(--black);
@@ -75,13 +77,24 @@ body {
         opacity: 0;
     }
 }
+
+/* Button Aqua */
 .btn-aqua {
     color: var(--btn-hover-bg);
+    /* display: block; */
     border: none;
     box-shadow: inset 0 10px 5px rgba(0, 0, 0, 0.05),
         0 25px 8px rgba(0, 0, 0, 0.05), 0 20px 15px rgba(0, 0, 0, 0.05),
         inset 0 -10px 15px rgba(255, 255, 255, 1);
 }
+.btn-aqua:hover {
+    transform: translateY(-5px);
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.05),
+        0 5px 8px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.05),
+        inset 0 -10px 15px rgba(255, 255, 255, 1);
+}
+
+/* Button Bounce */
 .btn-bouce:hover {
     background: var(--black);
     color: var(--white);
@@ -95,6 +108,8 @@ body {
 .btn-bouce:hover span {
     transform: translateY(-100px);
 }
+
+/* Button Surrouding Shadow */
 .btn-shadow {
     --clr: var(--white);
     color: var(--clr);
@@ -131,4 +146,73 @@ body {
     background: var(--btn-hover-bg);
     opacity: 0.9;
     border-radius: var(--radius-pill);
+}
+
+/* 3d Glass Card */
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    transform-style: preserve-3d;
+}
+.container .card {
+    width: 300px;
+    height: 300px;
+    margin: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+.container .card:hover {
+    height: 450px;
+}
+.container .card .imgBox {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: initial;
+    width: 300px;
+    height: 260px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: var(--transition-1);
+}
+.container .card:hover .imgBox {
+    top: -60px;
+    left: 20px;
+    right: 20px;
+    width: 260px;
+    transform: translate3d(0, 0, 75px);
+}
+
+.container .card .imgBox img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container .card .content {
+    position: relative;
+    padding: 10px 15px;
+    text-align: center;
+    color: var(--white);
+    visibility: hidden;
+    opacity: 0;
+    color: var(--btn-hover-bg);
+    transition: var(--transition-1);
+    transform: translateY(-200px) scale(1s);
+}
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-30px) scale(1);
 }
